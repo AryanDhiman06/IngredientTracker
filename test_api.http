@@ -1,0 +1,28 @@
+### Add test data
+POST http://localhost:5000/api/test-data
+
+### Get all ingredients
+GET http://localhost:5000/api/ingredients
+
+### Delete all ingredients
+DELETE http://localhost:5000/api/ingredients/reset-database?confirm=true
+
+### Add new ingredient
+POST http://localhost:5000/api/ingredients
+Content-Type: application/json
+
+{
+    "name": "Eggs",
+    "expiryDate": "2024-08-16",
+    "quantity": "12",
+    "category": "Dairy"
+}
+
+### Get expiring ingredients
+GET http://localhost:5000/api/expiring?days=5
+
+### Get stats
+GET http://localhost:5000/api/stats
+
+### Test recipe suggestions
+GET http://localhost:5000/api/recipe-suggestions
